@@ -1,3 +1,4 @@
+/* style.css */
 /* VARIÁVEIS E RESET */
 :root {
     --primary: #1a237e;
@@ -10,7 +11,6 @@
     --meta-blue: #1e3a8a;
     --meta-dark: #0f172a;
     --meta-accent: #3b82f6;
-    --success: #4caf50;
 }
 
 * {
@@ -27,7 +27,6 @@ body {
     overflow-x: hidden;
     background-attachment: fixed;
     min-height: 100vh;
-    counter-reset: cart-items;
 }
 
 /* LAYOUT */
@@ -44,7 +43,7 @@ body {
     flex-direction: column;
 }
 
-/* HEADER E NAVEGAÇÃO */
+/* HEADER E NAVEGAÇÃO - Estilo Duel Links Meta */
 header {
     background: var(--meta-dark);
     padding: 15px 0;
@@ -548,7 +547,7 @@ footer {
 }
 
 .cart-item {
-    display: none; /* Escondido por padrão */
+    display: flex;
     background: rgba(30, 58, 138, 0.5);
     border-radius: 10px;
     padding: 20px;
@@ -691,33 +690,6 @@ footer {
     display: none;
 }
 
-/* Controles do carrinho */
-.cart-controls {
-    display: none; /* Esconder os controles */
-}
-
-.cart-checkbox:checked {
-    counter-increment: cart-items;
-}
-
-.cart-checkbox:checked ~ #cart .cart-item-1 {
-    display: flex;
-}
-
-.cart-checkbox:checked ~ #cart .cart-item-2 {
-    display: flex;
-}
-
-/* ... regras para os outros itens ... */
-
-.cart-checkbox:checked ~ #cart .cart-item-11 {
-    display: flex;
-}
-
-.cart-count::after {
-    content: counter(cart-items);
-}
-
 /* ANIMAÇÕES */
 @keyframes fadeIn {
     from { opacity: 0; transform: translateY(20px); }
@@ -746,14 +718,6 @@ footer {
     
     .section-title h2 {
         font-size: 2rem;
-    }
-    
-    .card-detail-content {
-        flex-direction: column;
-    }
-    
-    .card-detail-image {
-        height: 300px;
     }
 }
 
