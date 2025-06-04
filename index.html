@@ -32,9 +32,25 @@
         </header>
         
         <main>
+            <!-- Controles ocultos do carrinho -->
+            <div class="cart-controls">
+                <!-- Cada produto terá um checkbox para controle -->
+                <input type="checkbox" id="cart-item-1" class="cart-checkbox">
+                <input type="checkbox" id="cart-item-2" class="cart-checkbox">
+                <input type="checkbox" id="cart-item-3" class="cart-checkbox">
+                <input type="checkbox" id="cart-item-4" class="cart-checkbox">
+                <input type="checkbox" id="cart-item-5" class="cart-checkbox">
+                <input type="checkbox" id="cart-item-6" class="cart-checkbox">
+                <input type="checkbox" id="cart-item-7" class="cart-checkbox">
+                <input type="checkbox" id="cart-item-8" class="cart-checkbox">
+                <input type="checkbox" id="cart-item-9" class="cart-checkbox">
+                <input type="checkbox" id="cart-item-10" class="cart-checkbox">
+                <input type="checkbox" id="cart-item-11" class="cart-checkbox">
+            </div>
+            
             <!-- PÁGINA HOME -->
             <section id="home" class="page">
-                <!-- Conteúdo da home -->
+                <!-- ... (conteúdo original da home) ... -->
             </section>
             
             <!-- PÁGINA PRODUTOS -->
@@ -47,7 +63,7 @@
                     
                     <div class="products">
                         <!-- Produto 1 -->
-                        <div class="product-card">
+                        <div class="product-card" onclick="showCardDetail('droll-lock-bird')">
                             <div class="product-badge">Comum</div>
                             <div class="product-img" style="background-image: url('https://images.unsplash.com/photo-1618005198919-d3d4b5a92ead?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80');"></div>
                             <div class="product-info">
@@ -58,35 +74,49 @@
                                     <div class="rarity">Comum</div>
                                 </div>
                                 <div class="product-actions">
-                                    <form method="get" action="#cart">
-                                        <input type="hidden" name="add" value="1">
-                                        <button type="submit" class="btn">Adicionar</button>
-                                    </form>
+                                    <button class="btn" onclick="showCardDetail('droll-lock-bird')">Ver Detalhes</button>
+                                    <label for="cart-item-1" class="btn cart-add-btn">Adicionar</label>
                                 </div>
                             </div>
                         </div>
                         
                         <!-- Produto 2 -->
-                        <div class="product-card">
-                            <div class="product-badge">Raro</div>
+                        <div class="product-card" onclick="showCardDetail('lock-cat')">
+                            <div class="product-badge">Comum</div>
                             <div class="product-img" style="background-image: url('https://images.unsplash.com/photo-1618005198919-d3d4b5a92ead?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80');"></div>
                             <div class="product-info">
-                                <h3>Lucky Pied Piper</h3>
-                                <p>Flautista que traz sorte para seu lado do campo.</p>
+                                <h3>Lock Cat</h3>
+                                <p>Gato travesso que bloqueia movimentos do oponente.</p>
                                 <div class="product-meta">
-                                    <div class="price">R$ 35,00</div>
-                                    <div class="rarity">Raro</div>
+                                    <div class="price">R$ 25,00</div>
+                                    <div class="rarity">Comum</div>
                                 </div>
                                 <div class="product-actions">
-                                    <form method="get" action="#cart">
-                                        <input type="hidden" name="add" value="2">
-                                        <button type="submit" class="btn">Adicionar</button>
-                                    </form>
+                                    <button class="btn" onclick="showCardDetail('lock-cat')">Ver Detalhes</button>
+                                    <label for="cart-item-2" class="btn cart-add-btn">Adicionar</label>
                                 </div>
                             </div>
                         </div>
                         
-                        <!-- Mais produtos... -->
+                        <!-- ... outros produtos com a mesma estrutura ... -->
+                        
+                        <!-- Produto 11 -->
+                        <div class="product-card" onclick="showCardDetail('bunilla')">
+                            <div class="product-badge">Super Raro</div>
+                            <div class="product-img" style="background-image: url('https://images.unsplash.com/photo-1618005198919-d3d4b5a92ead?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80');"></div>
+                            <div class="product-info">
+                                <h3>Bunilla</h3>
+                                <p>Adorável coelho com poderes místicos inesperados.</p>
+                                <div class="product-meta">
+                                    <div class="price">R$ 25,00</div>
+                                    <div class="rarity">Super Raro</div>
+                                </div>
+                                <div class="product-actions">
+                                    <button class="btn" onclick="showCardDetail('bunilla')">Ver Detalhes</button>
+                                    <label for="cart-item-11" class="btn cart-add-btn">Adicionar</label>
+                                </div>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </section>
@@ -102,45 +132,48 @@
                     <div class="cart-content">
                         <div class="cart-items">
                             <!-- Item 1 -->
-                            <div class="cart-item">
+                            <div class="cart-item cart-item-1">
                                 <div class="cart-item-image" style="background-image: url('https://images.unsplash.com/photo-1618005198919-d3d4b5a92ead?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80');"></div>
                                 <div class="cart-item-details">
                                     <h3 class="cart-item-name">Droll & Lock Bird</h3>
                                     <div class="cart-item-rarity">Comum</div>
                                     <div class="cart-item-price">R$ 25,00</div>
                                     <div class="cart-item-actions">
-                                        <form method="get" action="#cart" class="cart-item-quantity">
-                                            <input type="hidden" name="item" value="1">
-                                            <button type="submit" name="action" value="decrease" class="btn-quantity">-</button>
-                                            <span>1</span>
-                                            <button type="submit" name="action" value="increase" class="btn-quantity">+</button>
-                                        </form>
-                                        <form method="get" action="#cart">
-                                            <input type="hidden" name="remove" value="1">
-                                            <button type="submit" class="btn remove-item">Remover</button>
-                                        </form>
+                                        <div class="cart-item-quantity">
+                                            <label for="cart-item-1" class="btn remove-item">Remover</label>
+                                        </div>
                                     </div>
                                 </div>
                             </div>
                             
                             <!-- Item 2 -->
-                            <div class="cart-item">
+                            <div class="cart-item cart-item-2">
                                 <div class="cart-item-image" style="background-image: url('https://images.unsplash.com/photo-1618005198919-d3d4b5a92ead?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80');"></div>
                                 <div class="cart-item-details">
-                                    <h3 class="cart-item-name">Lucky Pied Piper</h3>
-                                    <div class="cart-item-rarity">Raro</div>
-                                    <div class="cart-item-price">R$ 35,00</div>
+                                    <h3 class="cart-item-name">Lock Cat</h3>
+                                    <div class="cart-item-rarity">Comum</div>
+                                    <div class="cart-item-price">R$ 25,00</div>
                                     <div class="cart-item-actions">
-                                        <form method="get" action="#cart" class="cart-item-quantity">
-                                            <input type="hidden" name="item" value="2">
-                                            <button type="submit" name="action" value="decrease" class="btn-quantity">-</button>
-                                            <span>2</span>
-                                            <button type="submit" name="action" value="increase" class="btn-quantity">+</button>
-                                        </form>
-                                        <form method="get" action="#cart">
-                                            <input type="hidden" name="remove" value="2">
-                                            <button type="submit" class="btn remove-item">Remover</button>
-                                        </form>
+                                        <div class="cart-item-quantity">
+                                            <label for="cart-item-2" class="btn remove-item">Remover</label>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            <!-- ... outros itens do carrinho ... -->
+                            
+                            <!-- Item 11 -->
+                            <div class="cart-item cart-item-11">
+                                <div class="cart-item-image" style="background-image: url('https://images.unsplash.com/photo-1618005198919-d3d4b5a92ead?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80');"></div>
+                                <div class="cart-item-details">
+                                    <h3 class="cart-item-name">Bunilla</h3>
+                                    <div class="cart-item-rarity">Super Raro</div>
+                                    <div class="cart-item-price">R$ 25,00</div>
+                                    <div class="cart-item-actions">
+                                        <div class="cart-item-quantity">
+                                            <label for="cart-item-11" class="btn remove-item">Remover</label>
+                                        </div>
                                     </div>
                                 </div>
                             </div>
@@ -151,33 +184,45 @@
                                 <h3>Resumo do Pedido</h3>
                                 <div class="summary-item">
                                     <span>Subtotal:</span>
-                                    <span class="subtotal">R$ 95,00</span>
+                                    <span class="subtotal">R$ 0,00</span>
                                 </div>
                                 <div class="summary-item">
                                     <span>Frete:</span>
-                                    <span class="shipping">R$ 15,00</span>
+                                    <span class="shipping">R$ 25,00</span>
                                 </div>
                                 <div class="summary-item total">
                                     <span>Total:</span>
-                                    <span class="total-price">R$ 110,00</span>
+                                    <span class="total-price">R$ 25,00</span>
                                 </div>
                                 <a href="#" class="btn checkout-btn">Finalizar Compra</a>
-                                <form method="get" action="#cart">
-                                    <input type="hidden" name="clear" value="1">
-                                    <button type="submit" class="btn clear-cart-btn">Limpar Carrinho</button>
-                                </form>
+                                <a href="#" class="btn clear-cart-btn">Limpar Carrinho</a>
                             </div>
                         </div>
                     </div>
                 </div>
             </section>
             
-            <!-- Outras seções... -->
+            <!-- ... outras seções (Sobre Nós, Trabalhe Conosco) ... -->
         </main>
         
+        <!-- ... seção de detalhes das cartas ... -->
+        
         <footer>
-            <!-- Rodapé -->
+            <!-- ... rodapé original ... -->
         </footer>
     </div>
+
+    <script>
+        // Mantido apenas para funcionalidade de detalhes das cartas
+        const cardData = { /* ... dados originais das cartas ... */ };
+
+        function showCardDetail(cardId) {
+            // ... implementação original ...
+        }
+
+        function closeCardDetail() {
+            // ... implementação original ...
+        }
+    </script>
 </body>
 </html>
