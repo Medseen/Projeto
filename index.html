@@ -14,33 +14,33 @@
                 <div class="logo">
                     <div class="logo-text">DuelCards</div>
                 </div>
-                <button class="mobile-menu-btn">☰</button>
-                <nav>
+                <a href="#menu" class="mobile-menu-btn">☰</a>
+                <nav id="menu">
                     <ul>
-                        <li><a href="#" class="nav-link active" data-page="home"><i class="fas fa-home"></i> Home</a></li>
-                        <li><a href="#" class="nav-link" data-page="products"><i class="fas fa-shopping-cart"></i> Produtos</a></li>
-                        <li><a href="#" class="nav-link" data-page="cart"><i class="fas fa-shopping-bag"></i> Carrinho (<span class="cart-count">0</span>)</a></li>
-                        <li><a href="#" class="nav-link" data-page="about"><i class="fas fa-users"></i> Sobre Nós</a></li>
-                        <li><a href="#" class="nav-link" data-page="jobs"><i class="fas fa-briefcase"></i> Trabalhe Conosco</a></li>
+                        <li><a href="#home" class="nav-link"><i class="fas fa-home"></i> Home</a></li>
+                        <li><a href="#products" class="nav-link"><i class="fas fa-shopping-cart"></i> Produtos</a></li>
+                        <li><a href="#cart" class="nav-link"><i class="fas fa-shopping-bag"></i> Carrinho</a></li>
+                        <li><a href="#about" class="nav-link"><i class="fas fa-users"></i> Sobre Nós</a></li>
+                        <li><a href="#jobs" class="nav-link"><i class="fas fa-briefcase"></i> Trabalhe Conosco</a></li>
                     </ul>
                 </nav>
                 <div class="cart-icon">
-                    <i class="fas fa-shopping-bag"></i>
-                    <span class="cart-count">0</span>
+                    <a href="#cart"><i class="fas fa-shopping-bag"></i></a>
+                    <span class="cart-count">3</span>
                 </div>
             </div>
         </header>
         
         <main>
             <!-- PÁGINA HOME -->
-            <div id="home" class="page active">
-                <section class="hero">
+            <section id="home" class="page">
+                <div class="hero">
                     <div class="hero-content">
                         <h1>O Melhor E-Shop de Cartas Yu-Gi-Oh!</h1>
                         <p>Encontre as cartas mais raras, decks completos e acessórios para aprimorar sua coleção e estratégias de duelo.</p>
-                        <a href="#" class="btn pulse" data-page="products">Explorar Cartas</a>
+                        <a href="#products" class="btn pulse">Explorar Cartas</a>
                     </div>
-                </section>
+                </div>
                 
                 <section>
                     <div class="container">
@@ -76,256 +76,344 @@
                         </div>
                     </div>
                 </section>
-            </div>
+            </section>
             
             <!-- PÁGINA PRODUTOS -->
-            <div id="products" class="page">
-                <section>
-                    <div class="container">
-                        <div class="section-title">
-                            <h2>Nossos Produtos</h2>
-                            <p>Descubra cartas raras, decks completos e acessórios exclusivos</p>
+            <section id="products" class="page">
+                <div class="container">
+                    <div class="section-title">
+                        <h2>Nossos Produtos</h2>
+                        <p>Descubra cartas raras, decks completos e acessórios exclusivos</p>
+                    </div>
+                    
+                    <div class="products">
+                        <!-- Produto 1 -->
+                        <div class="product-card">
+                            <div class="product-badge">Raro</div>
+                            <div class="product-img" style="background-image: url('https://images.unsplash.com/photo-1618005198919-d3d4b5a92ead?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80');"></div>
+                            <div class="product-info">
+                                <h3>Dragão Branco de Olhos Azuis</h3>
+                                <p>Uma das cartas mais poderosas e icônicas do jogo. Edição especial com foil holográfico.</p>
+                                <div class="product-meta">
+                                    <div class="price">R$ 349,99</div>
+                                    <div class="rarity">1ª Edição</div>
+                                </div>
+                                <div class="product-actions">
+                                    <a href="detalhes.html" target="_blank" class="btn">Ver Detalhes</a>
+                                    <a href="#cart" class="btn">Adicionar</a>
+                                </div>
+                            </div>
                         </div>
                         
-                        <div class="products">
-                            <!-- Produto 1 -->
-                            <div class="product-card" data-id="1" data-name="Dragão Branco de Olhos Azuis" data-price="349.99" data-rarity="1ª Edição" data-image="https://images.unsplash.com/photo-1618005198919-d3d4b5a92ead?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80">
-                                <div class="product-badge">Raro</div>
-                                <div class="product-img" style="background-image: url('https://images.unsplash.com/photo-1618005198919-d3d4b5a92ead?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80');"></div>
-                                <div class="product-info">
-                                    <h3>Dragão Branco de Olhos Azuis</h3>
-                                    <p>Uma das cartas mais poderosas e icônicas do jogo. Edição especial com foil holográfico.</p>
-                                    <div class="product-meta">
-                                        <div class="price">R$ 349,99</div>
-                                        <div class="rarity">1ª Edição</div>
-                                    </div>
-                                    <div class="product-actions">
-                                        <button class="btn view-details">Ver Detalhes</button>
-                                        <button class="btn add-to-cart">Adicionar</button>
-                                    </div>
+                        <!-- Produto 2 -->
+                        <div class="product-card">
+                            <div class="product-badge">Ultra Raro</div>
+                            <div class="product-img" style="background-image: url('https://images.unsplash.com/photo-1586977777201-0e5f1f0e6c1e?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80');"></div>
+                            <div class="product-info">
+                                <h3>Mago Negro</h3>
+                                <p>A carta mais famosa de Yugi Muto. Versão Ghost Rare com efeito holográfico único.</p>
+                                <div class="product-meta">
+                                    <div class="price">R$ 499,99</div>
+                                    <div class="rarity">Ghost Rare</div>
+                                </div>
+                                <div class="product-actions">
+                                    <a href="detalhes.html" target="_blank" class="btn">Ver Detalhes</a>
+                                    <a href="#cart" class="btn">Adicionar</a>
                                 </div>
                             </div>
-                            
-                            <!-- Produto 2 -->
-                            <div class="product-card" data-id="2" data-name="Mago Negro" data-price="499.99" data-rarity="Ghost Rare" data-image="https://images.unsplash.com/photo-1586977777201-0e5f1f0e6c1e?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80">
-                                <div class="product-badge">Ultra Raro</div>
-                                <div class="product-img" style="background-image: url('https://images.unsplash.com/photo-1586977777201-0e5f1f0e6c1e?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80');"></div>
-                                <div class="product-info">
-                                    <h3>Mago Negro</h3>
-                                    <p>A carta mais famosa de Yugi Muto. Versão Ghost Rare com efeito holográfico único.</p>
-                                    <div class="product-meta">
-                                        <div class="price">R$ 499,99</div>
-                                        <div class="rarity">Ghost Rare</div>
-                                    </div>
-                                    <div class="product-actions">
-                                        <button class="btn view-details">Ver Detalhes</button>
-                                        <button class="btn add-to-cart">Adicionar</button>
-                                    </div>
+                        </div>
+                        
+                        <!-- Produto 3 -->
+                        <div class="product-card">
+                            <div class="product-badge">Super Raro</div>
+                            <div class="product-img" style="background-image: url('https://images.unsplash.com/photo-1586977777201-0e5f1f0e6c1e?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80');"></div>
+                            <div class="product-info">
+                                <h3>Deck Estrutura Dragão</h3>
+                                <p>Deck completo pronto para duelos com foco em monstros Dragão. Inclui 40 cartas + extras.</p>
+                                <div class="product-meta">
+                                    <div class="price">R$ 189,99</div>
+                                    <div class="rarity">Estrutura</div>
+                                </div>
+                                <div class="product-actions">
+                                    <a href="detalhes.html" target="_blank" class="btn">Ver Detalhes</a>
+                                    <a href="#cart" class="btn">Adicionar</a>
                                 </div>
                             </div>
-                            
-                            <!-- Produto 3 -->
-                            <div class="product-card" data-id="3" data-name="Deck Estrutura Dragão" data-price="189.99" data-rarity="Estrutura" data-image="https://images.unsplash.com/photo-1586977777201-0e5f1f0e6c1e?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80">
-                                <div class="product-badge">Super Raro</div>
-                                <div class="product-img" style="background-image: url('https://images.unsplash.com/photo-1586977777201-0e5f1f0e6c1e?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80');"></div>
-                                <div class="product-info">
-                                    <h3>Deck Estrutura Dragão</h3>
-                                    <p>Deck completo pronto para duelos com foco em monstros Dragão. Inclui 40 cartas + extras.</p>
-                                    <div class="product-meta">
-                                        <div class="price">R$ 189,99</div>
-                                        <div class="rarity">Estrutura</div>
-                                    </div>
-                                    <div class="product-actions">
-                                        <button class="btn view-details">Ver Detalhes</button>
-                                        <button class="btn add-to-cart">Adicionar</button>
-                                    </div>
+                        </div>
+                        
+                        <!-- Produto 4 -->
+                        <div class="product-card">
+                            <div class="product-badge">Raro</div>
+                            <div class="product-img" style="background-image: url('https://images.unsplash.com/photo-1618005198919-d3d4b5a92ead?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80');"></div>
+                            <div class="product-info">
+                                <h3>Baralho do Exodia</h3>
+                                <p>Coleção completa das 5 partes do Exodia, o Proibido. Vença instantaneamente seu oponente.</p>
+                                <div class="product-meta">
+                                    <div class="price">R$ 429,99</div>
+                                    <div class="rarity">Edição Limitada</div>
                                 </div>
-                            </div>
-                            
-                            <!-- Produto 4 -->
-                            <div class="product-card" data-id="4" data-name="Baralho do Exodia" data-price="429.99" data-rarity="Edição Limitada" data-image="https://images.unsplash.com/photo-1618005198919-d3d4b5a92ead?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80">
-                                <div class="product-badge">Raro</div>
-                                <div class="product-img" style="background-image: url('https://images.unsplash.com/photo-1618005198919-d3d4b5a92ead?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80');"></div>
-                                <div class="product-info">
-                                    <h3>Baralho do Exodia</h3>
-                                    <p>Coleção completa das 5 partes do Exodia, o Proibido. Vença instantaneamente seu oponente.</p>
-                                    <div class="product-meta">
-                                        <div class="price">R$ 429,99</div>
-                                        <div class="rarity">Edição Limitada</div>
-                                    </div>
-                                    <div class="product-actions">
-                                        <button class="btn view-details">Ver Detalhes</button>
-                                        <button class="btn add-to-cart">Adicionar</button>
-                                    </div>
-                                </div>
-                            </div>
-                            
-                            <!-- Produto 5 -->
-                            <div class="product-card" data-id="5" data-name="Sacola de Duelista" data-price="159.99" data-rarity="Acessório" data-image="https://images.unsplash.com/photo-1586977777201-0e5f1f0e6c1e?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80">
-                                <div class="product-badge">Ultra Raro</div>
-                                <div class="product-img" style="background-image: url('https://images.unsplash.com/photo-1586977777201-0e5f1f0e6c1e?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80');"></div>
-                                <div class="product-info">
-                                    <h3>Sacola de Duelista</h3>
-                                    <p>Sacola exclusiva com espaço para 6 decks, álbum de cartas e acessórios. Material resistente.</p>
-                                    <div class="product-meta">
-                                        <div class="price">R$ 159,99</div>
-                                        <div class="rarity">Acessório</div>
-                                    </div>
-                                    <div class="product-actions">
-                                        <button class="btn view-details">Ver Detalhes</button>
-                                        <button class="btn add-to-cart">Adicionar</button>
-                                    </div>
-                                </div>
-                            </div>
-                            
-                            <!-- Produto 6 -->
-                            <div class="product-card" data-id="6" data-name="Protetores de Carta" data-price="49.99" data-rarity="Acessório" data-image="https://images.unsplash.com/photo-1618005198919-d3d4b5a92ead?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80">
-                                <div class="product-badge">Super Raro</div>
-                                <div class="product-img" style="background-image: url('https://images.unsplash.com/photo-1618005198919-d3d4b5a92ead?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80');"></div>
-                                <div class="product-info">
-                                    <h3>Protetores de Carta</h3>
-                                    <p>Kit com 100 protetores premium para cartas, proteção máxima contra danos e desgaste.</p>
-                                    <div class="product-meta">
-                                        <div class="price">R$ 49,99</div>
-                                        <div class="rarity">Acessório</div>
-                                    </div>
-                                    <div class="product-actions">
-                                        <button class="btn view-details">Ver Detalhes</button>
-                                        <button class="btn add-to-cart">Adicionar</button>
-                                    </div>
-                                </div>
-                            </div>
-                            
-                            <!-- Produto 7 -->
-                            <div class="product-card" data-id="7" data-name="Red-Eyes Black Dragon" data-price="299.99" data-rarity="1ª Edição" data-image="https://images.unsplash.com/photo-1586977777201-0e5f1f0e6c1e?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80">
-                                <div class="product-badge">Raro</div>
-                                <div class="product-img" style="background-image: url('https://images.unsplash.com/photo-1586977777201-0e5f1f0e6c1e?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80');"></div>
-                                <div class="product-info">
-                                    <h3>Red-Eyes Black Dragon</h3>
-                                    <p>A carta lendária de Joey Wheeler. Edição especial com foil holográfico e textura premium.</p>
-                                    <div class="product-meta">
-                                        <div class="price">R$ 299,99</div>
-                                        <div class="rarity">1ª Edição</div>
-                                    </div>
-                                    <div class="product-actions">
-                                        <button class="btn view-details">Ver Detalhes</button>
-                                        <button class="btn add-to-cart">Adicionar</button>
-                                    </div>
-                                </div>
-                            </div>
-                            
-                            <!-- Produto 8 -->
-                            <div class="product-card" data-id="8" data-name="Dark Magician Girl" data-price="399.99" data-rarity="Starlight Rare" data-image="https://images.unsplash.com/photo-1618005198919-d3d4b5a92ead?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80">
-                                <div class="product-badge">Ultra Raro</div>
-                                <div class="product-img" style="background-image: url('https://images.unsplash.com/photo-1618005198919-d3d4b5a92ead?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80');"></div>
-                                <div class="product-info">
-                                    <h3>Dark Magician Girl</h3>
-                                    <p>Versão ultra rara da famosa carta de Maga Negra. Efeito holográfico exclusivo.</p>
-                                    <div class="product-meta">
-                                        <div class="price">R$ 399,99</div>
-                                        <div class="rarity">Starlight Rare</div>
-                                    </div>
-                                    <div class="product-actions">
-                                        <button class="btn view-details">Ver Detalhes</button>
-                                        <button class="btn add-to-cart">Adicionar</button>
-                                    </div>
-                                </div>
-                            </div>
-                            
-                            <!-- Produto 9 -->
-                            <div class="product-card" data-id="9" data-name="Caixa de Booster" data-price="599.99" data-rarity="Phantom Rage" data-image="https://images.unsplash.com/photo-1586977777201-0e5f1f0e6c1e?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80">
-                                <div class="product-badge">Super Raro</div>
-                                <div class="product-img" style="background-image: url('https://images.unsplash.com/photo-1586977777201-0e5f1f0e6c1e?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80');"></div>
-                                <div class="product-info">
-                                    <h3>Caixa de Booster</h3>
-                                    <p>Caixa com 24 pacotes de booster da última edição. Chance de cartas ultra raras.</p>
-                                    <div class="product-meta">
-                                        <div class="price">R$ 599,99</div>
-                                        <div class="rarity">Phantom Rage</div>
-                                    </div>
-                                    <div class="product-actions">
-                                        <button class="btn view-details">Ver Detalhes</button>
-                                        <button class="btn add-to-cart">Adicionar</button>
-                                    </div>
-                                </div>
-                            </div>
-                            
-                            <!-- Produto 10 -->
-                            <div class="product-card" data-id="10" data-name="Álbum de Colecionador" data-price="129.99" data-rarity="Acessório" data-image="https://images.unsplash.com/photo-1618005198919-d3d4b5a92ead?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80">
-                                <div class="product-badge">Raro</div>
-                                <div class="product-img" style="background-image: url('https://images.unsplash.com/photo-1618005198919-d3d4b5a92ead?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80');"></div>
-                                <div class="product-info">
-                                    <h3>Álbum de Colecionador</h3>
-                                    <p>Álbum premium com 360 slots, capa dura e proteção UV para sua coleção de cartas.</p>
-                                    <div class="product-meta">
-                                        <div class="price">R$ 129,99</div>
-                                        <div class="rarity">Acessório</div>
-                                    </div>
-                                    <div class="product-actions">
-                                        <button class="btn view-details">Ver Detalhes</button>
-                                        <button class="btn add-to-cart">Adicionar</button>
-                                    </div>
+                                <div class="product-actions">
+                                    <a href="detalhes.html" target="_blank" class="btn">Ver Detalhes</a>
+                                    <a href="#cart" class="btn">Adicionar</a>
                                 </div>
                             </div>
                         </div>
                     </div>
-                </section>
-            </div>
+                </div>
+            </section>
             
             <!-- PÁGINA CARRINHO -->
-            <div id="cart" class="page">
-                <section>
-                    <div class="container">
-                        <div class="section-title">
-                            <h2>Seu Carrinho</h2>
-                            <p>Revise seus itens antes de finalizar a compra</p>
-                        </div>
-                        
-                        <div class="cart-content">
-                            <div class="cart-items">
-                                <!-- Itens serão inseridos aqui via JavaScript -->
+            <section id="cart" class="page">
+                <div class="container">
+                    <div class="section-title">
+                        <h2>Seu Carrinho</h2>
+                        <p>Revise seus itens antes de finalizar a compra</p>
+                    </div>
+                    
+                    <div class="cart-content">
+                        <div class="cart-items">
+                            <div class="cart-item">
+                                <div class="cart-item-image" style="background-image: url('https://images.unsplash.com/photo-1618005198919-d3d4b5a92ead?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80');"></div>
+                                <div class="cart-item-details">
+                                    <h3 class="cart-item-name">Dragão Branco de Olhos Azuis</h3>
+                                    <div class="cart-item-rarity">1ª Edição</div>
+                                    <div class="cart-item-price">R$ 349,99</div>
+                                    <div class="cart-item-actions">
+                                        <div class="cart-item-quantity">
+                                            <button class="decrease-quantity">-</button>
+                                            <span>1</span>
+                                            <button class="increase-quantity">+</button>
+                                        </div>
+                                        <a href="#" class="btn remove-item">Remover</a>
+                                    </div>
+                                </div>
                             </div>
                             
-                            <div class="cart-summary">
-                                <div class="summary-card">
-                                    <h3>Resumo do Pedido</h3>
-                                    <div class="summary-item">
-                                        <span>Subtotal:</span>
-                                        <span class="subtotal">R$ 0,00</span>
+                            <div class="cart-item">
+                                <div class="cart-item-image" style="background-image: url('https://images.unsplash.com/photo-1586977777201-0e5f1f0e6c1e?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80');"></div>
+                                <div class="cart-item-details">
+                                    <h3 class="cart-item-name">Mago Negro</h3>
+                                    <div class="cart-item-rarity">Ghost Rare</div>
+                                    <div class="cart-item-price">R$ 499,99</div>
+                                    <div class="cart-item-actions">
+                                        <div class="cart-item-quantity">
+                                            <button class="decrease-quantity">-</button>
+                                            <span>2</span>
+                                            <button class="increase-quantity">+</button>
+                                        </div>
+                                        <a href="#" class="btn remove-item">Remover</a>
                                     </div>
-                                    <div class="summary-item">
-                                        <span>Frete:</span>
-                                        <span class="shipping">R$ 0,00</span>
-                                    </div>
-                                    <div class="summary-item total">
-                                        <span>Total:</span>
-                                        <span class="total-price">R$ 0,00</span>
-                                    </div>
-                                    <button class="btn checkout-btn">Finalizar Compra</button>
-                                    <button class="btn clear-cart-btn" style="background-color: #d32f2f; margin-top: 10px;">Limpar Carrinho</button>
                                 </div>
                             </div>
                         </div>
+                        
+                        <div class="cart-summary">
+                            <div class="summary-card">
+                                <h3>Resumo do Pedido</h3>
+                                <div class="summary-item">
+                                    <span>Subtotal:</span>
+                                    <span class="subtotal">R$ 1,349.97</span>
+                                </div>
+                                <div class="summary-item">
+                                    <span>Frete:</span>
+                                    <span class="shipping">R$ 25,00</span>
+                                </div>
+                                <div class="summary-item total">
+                                    <span>Total:</span>
+                                    <span class="total-price">R$ 1,374.97</span>
+                                </div>
+                                <a href="#" class="btn checkout-btn">Finalizar Compra</a>
+                                <a href="#" class="btn clear-cart-btn">Limpar Carrinho</a>
+                            </div>
+                        </div>
                     </div>
-                </section>
-            </div>
+                </div>
+            </section>
             
             <!-- PÁGINA SOBRE NÓS -->
-            <div id="about" class="page">
-                <!-- Conteúdo mantido igual ao anterior -->
-            </div>
+            <section id="about" class="page">
+                <div class="container">
+                    <div class="section-title">
+                        <h2>Sobre Nós</h2>
+                        <p>Conheça a história da DuelCards e nossa equipe de duelistas</p>
+                    </div>
+                    
+                    <div class="contact-info">
+                        <h3 style="text-align: center; margin-bottom: 20px; color: var(--meta-accent);">Nossa História</h3>
+                        <p style="margin-bottom: 20px; text-align: justify;">
+                            Fundada em 2012 por apaixonados por Yu-Gi-Oh!, a DuelCards começou como uma pequena loja física em São Paulo. 
+                            O sonho de criar um espaço onde duelistas pudessem encontrar as cartas mais raras e trocar experiências se tornou realidade 
+                            e hoje somos a maior loja online especializada do Brasil, com entrega para todo o país.
+                        </p>
+                        <p style="text-align: justify;">
+                            Nossa missão é fornecer produtos originais de alta qualidade, promover a comunidade de duelistas e ajudar 
+                            na montagem de decks e estratégias de jogo. Todos os nossos colaboradores são duelistas experientes prontos 
+                            para compartilhar conhecimento.
+                        </p>
+                    </div>
+                    
+                    <div class="section-title" style="margin-top: 50px;">
+                        <h3>Nossa Equipe</h3>
+                    </div>
+                    
+                    <div class="team">
+                        <div class="team-member">
+                            <div class="member-photo" style="background-image: url('https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80');"></div>
+                            <div class="member-info">
+                                <h3>Rafael Santos</h3>
+                                <p>Fundador e CEO</p>
+                                <p>Campeão Brasileiro 2015</p>
+                            </div>
+                        </div>
+                        
+                        <div class="team-member">
+                            <div class="member-photo" style="background-image: url('https://images.unsplash.com/photo-1519085360753-af0119f7cbe7?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80');"></div>
+                            <div class="member-info">
+                                <h3>Juliana Lima</h3>
+                                <p>Gerente de Produtos</p>
+                                <p>Especialista em cartas raras</p>
+                            </div>
+                        </div>
+                        
+                        <div class="team-member">
+                            <div class="member-photo" style="background-image: url('https://images.unsplash.com/photo-1508214751196-bcfd4ca60f91?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80');"></div>
+                            <div class="member-info">
+                                <h3>Carlos Mendes</h3>
+                                <p>Head de Logística</p>
+                                <p>Especialista em envios seguros</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
             
             <!-- PÁGINA TRABALHE CONOSCO -->
-            <div id="jobs" class="page">
-                <!-- Conteúdo mantido igual ao anterior -->
-            </div>
+            <section id="jobs" class="page">
+                <div class="container">
+                    <div class="section-title">
+                        <h2>Trabalhe Conosco</h2>
+                        <p>Faça parte da equipe da maior loja de Yu-Gi-Oh! do Brasil</p>
+                    </div>
+                    
+                    <div class="contact-info">
+                        <h3 style="text-align: center; margin-bottom: 20px; color: var(--meta-accent);">Nossa Cultura</h3>
+                        <p style="text-align: justify; margin-bottom: 20px;">
+                            Na DuelCards, valorizamos a paixão pelo jogo, o trabalho em equipe e o atendimento excepcional ao cliente. 
+                            Nossa equipe é formada por duelistas experientes que compartilham conhecimento e ajudam a comunidade a crescer.
+                        </p>
+                        
+                        <div style="margin-top: 30px;">
+                            <h4 style="margin-bottom: 15px; color: var(--meta-accent);">Benefícios:</h4>
+                            <ul style="list-style-type: none; padding-left: 20px;">
+                                <li style="margin-bottom: 10px; display: flex; align-items: center; gap: 10px;">
+                                    <i class="fas fa-check-circle" style="color: var(--meta-accent);"></i>
+                                    Plano de saúde e odontológico
+                                </li>
+                                <li style="margin-bottom: 10px; display: flex; align-items: center; gap: 10px;">
+                                    <i class="fas fa-check-circle" style="color: var(--meta-accent);"></i>
+                                    Vale-refeição e vale-alimentação
+                                </li>
+                                <li style="margin-bottom: 10px; display: flex; align-items: center; gap: 10px;">
+                                    <i class="fas fa-check-circle" style="color: var(--meta-accent);"></i>
+                                    Descontos especiais em produtos
+                                </li>
+                                <li style="margin-bottom: 10px; display: flex; align-items: center; gap: 10px;">
+                                    <i class="fas fa-check-circle" style="color: var(--meta-accent);"></i>
+                                    Ambiente descontraído e criativo
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                    
+                    <div class="section-title" style="margin-top: 50px;">
+                        <h3>Vagas Disponíveis</h3>
+                    </div>
+                    
+                    <div class="features">
+                        <div class="feature-card">
+                            <div class="feature-icon"><i class="fas fa-headset"></i></div>
+                            <h3>Atendente Duelista</h3>
+                            <p>Atendimento ao cliente online. Conhecimento avançado em Yu-Gi-Oh! necessário.</p>
+                            <a href="#" class="btn" style="margin-top: 15px;">Candidatar-se</a>
+                        </div>
+                        
+                        <div class="feature-card">
+                            <div class="feature-icon"><i class="fas fa-shipping-fast"></i></div>
+                            <h3>Assistente de Logística</h3>
+                            <p>Organização de estoque e preparo de pedidos. Cuidado no manuseio de cartas raras.</p>
+                            <a href="#" class="btn" style="margin-top: 15px;">Candidatar-se</a>
+                        </div>
+                        
+                        <div class="feature-card">
+                            <div class="feature-icon"><i class="fas fa-camera"></i></div>
+                            <h3>Fotógrafo de Produtos</h3>
+                            <p>Captura de imagens de alta qualidade para cartas e produtos. Conhecimento em edição.</p>
+                            <a href="#" class="btn" style="margin-top: 15px;">Candidatar-se</a>
+                        </div>
+                    </div>
+                </div>
+            </section>
         </main>
         
         <footer>
-            <!-- Rodapé mantido igual ao anterior -->
+            <div class="container">
+                <div class="footer-content">
+                    <div class="footer-section">
+                        <h3>DuelCards</h3>
+                        <p>A maior loja especializada em cartas de Yu-Gi-Oh! do Brasil. Produtos originais com garantia de autenticidade.</p>
+                        <div class="social-links">
+                            <a href="#"><i class="fab fa-facebook-f"></i></a>
+                            <a href="#"><i class="fab fa-instagram"></i></a>
+                            <a href="#"><i class="fab fa-twitter"></i></a>
+                            <a href="#"><i class="fab fa-youtube"></i></a>
+                        </div>
+                    </div>
+                    
+                    <div class="footer-section">
+                        <h3>Links Rápidos</h3>
+                        <ul class="quick-links">
+                            <li><a href="#home"><i class="fas fa-chevron-right"></i> Home</a></li>
+                            <li><a href="#products"><i class="fas fa-chevron-right"></i> Produtos</a></li>
+                            <li><a href="#cart"><i class="fas fa-chevron-right"></i> Carrinho</a></li>
+                            <li><a href="#about"><i class="fas fa-chevron-right"></i> Sobre Nós</a></li>
+                            <li><a href="#jobs"><i class="fas fa-chevron-right"></i> Trabalhe Conosco</a></li>
+                        </ul>
+                    </div>
+                    
+                    <div class="footer-section">
+                        <h3>Informações</h3>
+                        <ul class="quick-links">
+                            <li><a href="#"><i class="fas fa-chevron-right"></i> Política de Privacidade</a></li>
+                            <li><a href="#"><i class="fas fa-chevron-right"></i> Termos de Uso</a></li>
+                            <li><a href="#"><i class="fas fa-chevron-right"></i> Trocas e Devoluções</a></li>
+                            <li><a href="#"><i class="fas fa-chevron-right"></i> Perguntas Frequentes</a></li>
+                        </ul>
+                    </div>
+                    
+                    <div class="footer-section">
+                        <h3>Contato</h3>
+                        <div class="contact-info">
+                            <div class="contact-item">
+                                <i class="fas fa-map-marker-alt"></i>
+                                <span>Av. Paulista, 1000 - São Paulo, SP</span>
+                            </div>
+                            <div class="contact-item">
+                                <i class="fas fa-phone"></i>
+                                <span>(11) 3333-4444</span>
+                            </div>
+                            <div class="contact-item">
+                                <i class="fas fa-envelope"></i>
+                                <span>contato@duelcards.com.br</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="footer-bottom">
+                    <p>&copy; 2023 DuelCards - Todos os direitos reservados. Yu-Gi-Oh! é uma marca registrada da Konami.</p>
+                </div>
+            </div>
         </footer>
     </div>
-    
-    <script src="script.js"></script>
 </body>
 </html>
